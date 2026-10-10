@@ -8,14 +8,15 @@ An AI Knowledge Workspace for Research & Learning — inspired by Google Noteboo
 
 ![Hero](screenshots/hero.png)
 
-![Status](https://img.shields.io/badge/status-in%20development-yellow)
-![License](https://img.shields.io/badge/license-MIT-blue)
-![Backend](https://img.shields.io/badge/backend-FastAPI-009688)
-![Frontend](https://img.shields.io/badge/frontend-Next.js-black)
+
+<!-- [![Project Demo](screenshots/demo.jpeg)](https://youtu.be/uC39hg5Jrds) -->
+
+<a href="https://youtu.be/uC39hg5Jrds">
+  <img src="screenshots/demo.jpeg" alt="Watch DocContextly Demo" width="55%">
+</a>
 
 </div>
 
----
 
 ## Why DocContextly
 
@@ -29,28 +30,6 @@ DocContextly puts everything in one notebook. Upload your sources once, and:
 
 No more re-explaining context to a chatbot or manually building slides from your notes.
 
----
-
-## 🚧 Project Status
-
-Core functionality is complete and working end-to-end. Current focus: production deployment, performance tuning, and testing.
-
-| Area | Status |
-|---|---|
-| Multi-source ingestion (PDF, DOCX, CSV, MD, web, YouTube) | ✅ Done |
-| RAG-based chat | ✅ Done |
-| Source preview system | ✅ Done |
-| Summary / FAQ / Quiz / Flashcard / Study Guide generation | ✅ Done |
-| Mind map generation | ✅ Done |
-| Slide deck generation (multi-theme, exportable) | ✅ Done |
-| Podcast-style voiceover generation | ✅ Done |
-| Redis + ARQ background workers | ✅ Done |
-| Vector search with Qdrant | ✅ Done |
-| Production deployment | 🔄 In progress |
-| Performance optimization | 🔄 In progress |
-| End-to-end testing | 🔄 In progress |
-
----
 
 ## ✨ Features
 
@@ -196,7 +175,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 
 alembic upgrade head
-uvicorn app.main:app --reload
+uvicorn main:app --reload
 ```
 
 ### Background Worker

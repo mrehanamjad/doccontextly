@@ -17,11 +17,23 @@ class Settings(BaseSettings):
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
 
     # ── LLM Provider ──────────────────────────────────────────────────────────
-    LLM_PROVIDER: str = 'groq'              # groq | openai | openrouter
+    LLM_PROVIDER: str = 'groq'              # groq | openai | openrouter | custom
     GROQ_API_KEY: str = ''
     OPENAI_API_KEY: str = ''
     OPENROUTER_API_KEY: str = ''
     LLM_MODEL: str = 'qwen/qwen3-32b'
+
+     # Generic OpenAI-compatible endpoint 
+    CUSTOM_LLM_API_KEY: str = ''
+    CUSTOM_LLM_BASE_URL: str = ''
+    CUSTOM_LLM_MODEL: str = ''   
+
+
+    # Ollama (local)
+    OLLAMA_BASE_URL: str = 'http://localhost:11434'
+    OLLAMA_MODEL: str = 'qwen2.5:3b'
+
+    MAX_TOKENS: int = 8192
 
     # ── Embeddings ─────────────────────────────────────────────────────────────
     EMBEDDING_PROVIDER: str = 'huggingface'  # huggingface | openai
