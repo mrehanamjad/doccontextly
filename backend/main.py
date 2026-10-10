@@ -44,8 +44,8 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(
-    title="LM Notes API",
-    description="NotebookLM-style document RAG with conversational memory",
+    title="DocContextly API",
+    description="AI Knowledge Workspace for Research & Learning",
     version="0.1.0",
     lifespan=lifespan,
 )

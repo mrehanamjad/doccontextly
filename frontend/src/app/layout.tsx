@@ -3,6 +3,7 @@ import Providers from "./providers";
 import { Toaster } from "@/components/ui/sonner";
 import "../styles.css";
 
+
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,

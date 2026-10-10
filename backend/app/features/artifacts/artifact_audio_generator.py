@@ -10,14 +10,6 @@ Pipeline:
 4. Return the local file path + total duration so the caller can
    upload it to storage (ImageKit) and persist the URL.
 
-Design notes:
-- Free, no-API-key TTS via `edge-tts` (Microsoft Edge's online neural voices).
-- Uses the newer "Multilingual" neural voices, which sound noticeably more
-  natural/conversational than the older locale-specific voices — a good fit
-  for a podcast-style two-host format.
-- Synthesis is done concurrently (bounded) for speed, but clips are stitched
-  back together in original dialogue order.
-- Every temp file is cleaned up, including on partial failure.
 """
 
 from __future__ import annotations
@@ -51,12 +43,9 @@ class VoiceStyleConfig:
     host_2: HostVoiceConfig
 
 
-# Microsoft Edge neural voices. The "Multilingual" voices are the newest
-# generation and sound the most natural/conversational for a podcast format.
+# Microsoft Edge neural voices. 
 VOICE_STYLES: Dict[str, VoiceStyleConfig] = {
     AudioOverviewVoiceStyle.DEFAULT.value: VoiceStyleConfig(
-        # Warm, conversational male host + expressive, engaged female host.
-        # This pairing mirrors the classic NotebookLM "two curious hosts" feel.
         host_1=HostVoiceConfig(voice="en-US-AndrewMultilingualNeural", rate="+2%"),
         host_2=HostVoiceConfig(voice="en-US-AvaMultilingualNeural", rate="+2%"),
     ),

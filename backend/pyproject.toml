@@ -1,7 +1,7 @@
 [project]
-name = "lm-notes"
+name = "DocContextly"
 version = "0.1.0"
-description = "A notebooklm clone"
+description = "AI Knowledge Workspace for Research & Learning"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [

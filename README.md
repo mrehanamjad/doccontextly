@@ -162,7 +162,7 @@ AI generation (slide decks, voiceovers, etc.) runs asynchronously so the app sta
 ### Clone
 
 ```bash
-git clone https://github.com/mrehanamjad/DocContextly-AI-notebooklm-clone.git
+git clone https://github.com/mrehanamjad/doccontextly.git
 cd doccontextly
 ```
 

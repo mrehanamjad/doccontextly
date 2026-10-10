@@ -2,12 +2,7 @@
 Artifact Context Builder
 ============================
 
-Optimized for:
-- NotebookLM-style artifact generation
-- Groq free-tier token constraints
-- llama-3.3-70b-versatile
-- Qdrant + all-MiniLM-L6-v2
-- Current payload shape:
+- payload shape:
     {
         "source_id": "...",
         "source_type": "youtube|pdf|web|audio|note|doc",
@@ -21,24 +16,15 @@ Optimized for:
         "file_name": "..."
     }
 
-Goals:
 - Keep retrieval context compact and useful
-- Avoid blowing Groq free-tier token limits
-- Support artifact generation:
-    * quiz
-    * flashcards
-    * faq
-    * study_guide
-    * summary
-    * mindmap
-    * slide_deck
+- Avoid blowing provider free-tier token limits
 - Work even without rich metadata like section_title / contains_definition
 
 Core strategy:
 1. Focused semantic retrieval if prompt exists
 2. Broad coverage retrieval across sources
 3. Merge with artifact-aware heuristics
-4. Enforce very tight token budget
+4. Enforce  tight token budget
 5. Assemble compact structured context
 
 This builder is intentionally conservative with context size.
